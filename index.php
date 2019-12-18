@@ -27,12 +27,10 @@ function getFeedTitle($feed_url, $id_feed) {
     $content = file_get_contents($feed_url);
     $x = new SimpleXmlElement($content);
     
-    $id = 0;
     foreach($x->channel as $entry) {
         $fulltitle = "$entry->title ";
         if ($entry->lastBuildDate<>"") $fulltitle = $fulltitle . "($entry->lastBuildDate)";
         echo "<a href='?id_feed=$id_feed'>$fulltitle</a><br/>";
-        $id = $id+1;
     }
     
 }
