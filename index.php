@@ -1,6 +1,5 @@
 <?php
 
-$filename = "rssfeeds.txt";
 $arr = file("rsslinks.txt", FILE_IGNORE_NEW_LINES);
 
 if (isset($_GET['id_feed'])) {
