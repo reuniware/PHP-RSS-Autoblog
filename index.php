@@ -12,7 +12,9 @@ if (isset($_GET['id_feed'])) {
 $id_feed = 0;
 foreach ($arr as &$value) {
 try {
-    getFeedTitle($value, $id_feed);
+    if (!startsWith($value, "#")) {
+        getFeedTitle($value, $id_feed);
+    }
     $id_feed = $id_feed+1;
 }catch(exception $e){
     echo "$e";
@@ -59,5 +61,11 @@ function getFeed($feed_url) {
     echo "</ul>";
     
 }
+
+function startsWith ($string, $startString) 
+{ 
+    $len = strlen($startString); 
+    return (substr($string, 0, $len) === $startString); 
+} 
 
 ?>
