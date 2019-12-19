@@ -12,21 +12,18 @@ if (isset($_GET['id_feed'])) {
     echo "<a href='/'>Back to main</a><br/><br/>";
     $id_feed = $_GET['id_feed'];
     getFeed($arr[$id_feed]);
-    
-    echo "</body></html>";
-    exit;
-}
-
-$id_feed = 0;
-foreach ($arr as &$value) {
-try {
-    if (!startsWith($value, "#")) {
-        getFeedTitle($value, $id_feed);
+} else {
+    $id_feed = 0;
+    foreach ($arr as &$value) {
+    try {
+        if (!startsWith($value, "#")) {
+            getFeedTitle($value, $id_feed);
+        }
+        $id_feed = $id_feed+1;
+    }catch(exception $e){
+        echo "$e";
     }
-    $id_feed = $id_feed+1;
-}catch(exception $e){
-    echo "$e";
-}
+    }
 }
 
 echo "</body></html>";
