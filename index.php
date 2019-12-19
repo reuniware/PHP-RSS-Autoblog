@@ -2,7 +2,7 @@
 
 // echo "<img src='https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-11/f3fe64e0-06ee-11ea-a7b7-c13b44577ec9' width='125px' height='56px'/>";
 
-echo "<html><head><title>Autoblog</title>";
+echo "<html><head><title>Alter Native News Blog</title>";
 echo "<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>";
 echo "</head><body>";
 
@@ -35,6 +35,8 @@ exit;
 
 function getFeedTitle($feed_url, $id_feed) {
 
+    $microtime_start = microtime(true);
+
     try{
     $content = file_get_contents($feed_url);
     $x = new SimpleXmlElement($content);
@@ -42,16 +44,21 @@ function getFeedTitle($feed_url, $id_feed) {
     foreach($x->channel as $entry) {
         $fulltitle = "$entry->title ";
         if ($entry->lastBuildDate<>"") $fulltitle = $fulltitle . "($entry->lastBuildDate)";
-        echo "<a href='?id_feed=$id_feed'>$fulltitle</a><br/>";
+        echo "<a href='?id_feed=$id_feed'>$fulltitle</a>";
     }
     }catch(exception $e){
         
     }
     
+    $microtime_end = microtime(true);
+    $elapsed_time = $microtime_end - $microtime_start;
+    $elapsed_str = number_format((float)$elapsed_time, 2, '.', '');
+
+    echo "<p class='text-warning'>(Loading time = $elapsed_str)</p>";
+    
 }
 
 function getFeed($feed_url) {
-     
     $content = file_get_contents($feed_url);
     $x = new SimpleXmlElement($content);
     
