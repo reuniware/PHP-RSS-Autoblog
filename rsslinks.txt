@@ -1,19 +1,14 @@
-https://la1ere.francetvinfo.fr/reunion/actu/rss
-#https://news.un.org/feed/subscribe/en/news/region/middle-east/feed/rss.xml
-#https://news.un.org/feed/subscribe/en/news/region/europe/feed/rss.xml
-#https://news.un.org/feed/subscribe/en/news/region/africa/feed/rss.xml
-#https://news.un.org/feed/subscribe/en/news/region/americas/feed/rss.xml
-https://news.un.org/feed/subscribe/en/news/region/asia-pacific/feed/rss.xml
-https://www.lefigaro.fr/rss/figaro_actualites.xml
-https://latesthackingnews.com/feed/
-#https://www.welivesecurity.com/feed
-#http://www.ehacking.net/feeds/posts/default
-#http://thehackernews.com/feeds/posts/default
-#http://www.leparisien.fr/sports/football/rss.xml
-http://www.leparisien.fr/seine-et-marne-77/rss.xml
-https://news.google.com/rss/search?q=android+developer&hl=en-US&gl=US&ceid=US%3Aen&x=1571747148.1512
-https://www.forexlive.com/feed
-#https://www.dailyforex.com/rss/forexnews.xml
-#https://www.dailyforex.com/rss/technicalanalysis.xml
-#https://www.dailyforex.com/rss/fundamentalanalysis.xml
-#https://www.dailyforex.com/rss/forexarticles.xml
+https://la1ere.francetvinfo.fr/reunion/actu/rss##Les nouvelles de l'Ile de La Réunion
+https://www.lefigaro.fr/rss/figaro_actualites.xml##Les news du Figaro online
+https://www.welivesecurity.com/feed##News sécurité
+#http://www.leparisien.fr/sports/football/rss.xml##News du foot
+http://www.leparisien.fr/seine-et-marne-77/rss.xml##News de Seine-et-Marne
+https://news.google.com/rss/?hl=fr&gl=FR&ceid=FR%3Afr##News Googles
+https://www.gameinformer.com/news.xml##News Gaming
+http://feeds.feedburner.com/IEfusion##News Intelligence Economique
+https://www.dalloz-actualite.fr/actualites/feed.xml##News Dalloz générales
+https://www.dalloz-actualite.fr/taxonomy/term/291/feed.xml##News Dalloz
+https://www.ssi.gouv.fr/feed/actualite/##News ANSSI
+https://www.efl.fr/rss/comptable-financier.xml##News Comptabilité EFL
+https://www.efl.fr/rss/immobilier.xml##News Immobilier EFL
+https://www.efl.fr/rss/fiscal.xml##News Fiscales EFL
