@@ -54,7 +54,7 @@ function getFeedTitle($feed_url, $id_feed) {
     $elapsed_time = $microtime_end - $microtime_start;
     $elapsed_str = number_format((float)$elapsed_time, 2, '.', '');
 
-    echo "<p class='text-warning'>(Loading time = $elapsed_str)</p>";
+    echo "<p class='text-warning'><small>(Loading time = $elapsed_str)</small></p>";
     
 }
 
