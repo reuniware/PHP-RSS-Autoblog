@@ -17,7 +17,11 @@ if (isset($_GET['id_feed'])) {
     foreach ($arr as &$value) {
     try {
         if (!startsWith($value, "#")) {
-            getFeedTitle($value, $id_feed);
+            $subvalue = explode('##', $value);
+            if ($subvalue[1] <> null) {
+                echo "$subvalue[1] : ";
+            }
+            getFeedTitle($subvalue[0], $id_feed);
         }
         $id_feed = $id_feed+1;
     }catch(exception $e){
