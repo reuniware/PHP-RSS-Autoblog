@@ -1,3 +1,5 @@
+#Exemple de fichier de flux RSS à obtenir.
+#On peut ajouter un titre pour chaque flux RSS en ajoutant ## suivi du titre (mais il n'est pas obligatoire d'ajouter un titre)
 https://la1ere.francetvinfo.fr/reunion/actu/rss##Les nouvelles de l'Ile de La Réunion
 https://www.lefigaro.fr/rss/figaro_actualites.xml##Les news du Figaro online
 https://www.welivesecurity.com/feed##News sécurité
