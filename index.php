@@ -2,7 +2,9 @@
 
 // echo "<img src='https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-11/f3fe64e0-06ee-11ea-a7b7-c13b44577ec9' width='125px' height='56px'/>";
 
-echo "<html><head><title>Autoblog</title></head><body>";
+echo "<html><head><title>Autoblog</title>";
+echo "<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>";
+echo "</head><body>";
 
 $arr = file("rsslinks.txt", FILE_IGNORE_NEW_LINES);
 
